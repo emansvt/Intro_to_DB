@@ -16,6 +16,8 @@ for statement in sql.split(";"):
         cursor.execute(statement)
         
 print("Datebase 'alx_book_store' created successfully!")
+except mysql.connector.Error as err:
+    print(f"Error: {err}")
 cursor.close()
 db.close()
     

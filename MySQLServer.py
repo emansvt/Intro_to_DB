@@ -7,6 +7,7 @@ db = mysql.connector.connect(
 
 )
 cursor = db.cursor()
+cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
 with open("alx_book_store.sql", "r", encoding="utf-8") as f:
     sql=f.read()
     
